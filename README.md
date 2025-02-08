@@ -1,11 +1,12 @@
 # 📝 Rolling -team 4
 
-* 배포 URL : https://rolling-ohp8jfiua-grimza99s-projects.vercel.app/
+* 배포 URL : https://rolling-xi.vercel.app/
 
 ## 📖 목차
+
 - [프로젝트 개요](#프로젝트-개요)
 - [프로젝트 내용](#프로젝트-내용)
-- [개발 환경](#개발-환경)
+- [🛠개발 환경](#-개발-환경)
 - [프로젝트 구조](#프로젝트-구조)
 - [프로젝트 팀 구성 및 역할](#프로젝트-팀-구성-및-역할)
 - [프로젝트 과정](#프로젝트-과정)
@@ -58,7 +59,7 @@
 <br>
 <hr>
 
-### **🛠**  개발 환경
+### **🛠** 개발 환경
 
 * **Front-End** 
   <p><img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"> <img src="https://img.shields.io/badge/VITE-646CFF?style=for-the-badge&logo=VITE&logoColor=white"> <img src="https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white"> <img src="https://img.shields.io/badge/Lodash-3492FF?style=for-the-badge&logo=Lodash&logoColor=white"> <img src="https://img.shields.io/badge/ReactRouter-CA4245?style=for-the-badge&logo=ReactRouter&logoColor=white"> <img src="https://img.shields.io/badge/Swiper-6332F6?style=for-the-badge&logo=Swiper&logoColor=white"> <img src="https://img.shields.io/badge/Styledcomponents-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white"></p>
@@ -79,14 +80,21 @@
 ```jsx
 ├── src/
 │		├── api/                       # API 호출 함수
-│		│   ├── messages.api.jsx
-│		│   └── recipient.api.jsx
+│		│
+│		├── constants/
+│		├── hooks/                     # 커스텀 훅
 │		│   
-│		├── components/                # 컴포넌트 관련 
+│		├── components/                # 컴포넌트 관련
+│		│   │
 │		│   ├── Badge/ 
 │		│   ├── CircleImages/ 
 │		│   ├── Emoji/ 
-│		│   ├── RollingCard/                
+│		│   ├── ListCard/
+│		│   ├── ModalContent/
+│		│   ├── SelectableBox/
+│		│   ├── ShareButton/
+│		│   ├── Skeleton/ 
+│		│   ├── RollingCard/                 
 │		│   └── common/                # 공통 컴포넌트 관련 
 │		│       ├── Header/ 
 │		│       ├── Button/
@@ -100,26 +108,20 @@
 │		│   ├── LandingPage/                
 │		│   ├── ListPage/
 │		│   ├── RollingPage/                 
-│		│   │   ├── Skeleton/
-│		│   │   ├── Messages.jsx
-│		│   │   ├── Mesages.data.jsx
-│		│   │   ├── Rollingpage.jsx
-│		│   │   └── RollingPage.styled.jsx
-│		│   └── ToPage    
+│		│   └── ToPage/
 │		│
 │		└── styles/                     # 전역 스타일, theme 관련 
 │		    ├── GlobalStyle.jsx
 │		    ├── Layout.jsx
 │		    └── theme.jsx
-│		
+│		...
 ├── .env                            # 환경변수
 ├── .gitignore
 ├── package.json
 ├── vercel.json
 └── README.md
-│
-```
 
+```
 
 # **👥** 프로젝트 팀 구성 및 역할
 
@@ -132,10 +134,10 @@
 | 이름 | 역할 | GitHub |
 | --- | --- | --- |
 | **임용균** | button 컴포넌트 / toast 컴포넌트 / list page | https://github.com/ozen0718 |
-| **김희진** | header / layout / badge / postCard 컴포넌트 / landing page | https://github.com/heewls |
-| **황혜진** | modal 컴포넌트 / to page / 외부 공유 버튼 | https://github.com/hhjin1 |
+| **김희진** | header / layout / badge / postCard 컴포넌트 / landing page /emoji | https://github.com/heewls |
+| **황혜진** | modal 컴포넌트 / to page / 카카오 공유 버튼/ 발표 / theme.color | https://github.com/hhjin1 |
 | **이재혁** | 초기 프로젝트 세팅 / input 컴포넌트 / from page | https://github.com/LEEHAEHYUK |
-| **유선향** | select 컴포넌트 / post{id} page / 배포 / 발표 준비 | https://github.com/grimza99 |
+| **유선향** | select / post{id} page / 배포 / 발표 준비 / theme.font / 전여상수 / 모달 컨텐츠 | https://github.com/grimza99 |
 
 ## 🤓 멘토링 (이종명 멘토님)
 
@@ -146,8 +148,6 @@
 
 <aside>
 
-# 프로젝트 수행 절차 및 방법
-
 </aside>
 
 ---
@@ -157,59 +157,35 @@
 **1. 프로젝트 사전 기획**
 
 - **목표 설정**
-    
-    → *예시: 웹 애플리케이션 개발*
-    
-- **요구 사항 수집**
-    
-    → 제시된 Figma의 구현 내용을 바탕으로 UI, 반응형 디자인
-    
-    → Figma에 제시된 내용이외에도, 사용자 경험 상향을 위한 부가 기능 상의 
-    
+    → 커뮤니티 기능 목적의 웹 애플리케이션 개발
+    → 제시된 피그마와 swagger를 기반으로 필수 구현기능 뿐아니라 사용자의 경험 개선을 목적으로 추가기능 구현까지 목표로 한 
 - **일정 계획**: 프로젝트 마일스톤 설정 및 일정 관리
     
-    → 1주차 : 공통 컴포넌트 완료후 1차 배포
-    
-    → 2주차 : 분담된 페이지를 개발, 주기적인 코어타임으로 서로의 진행 현황 교류 
-    
-    → 3주차 : UX 와 성능 향상을 위한 리팩토링 , 회고 , 프로젝트 발표 자료 준비 
+    *  1주차 : 공통 컴포넌트 완료후 1차 배포
+    *  2주차 : 분담된 페이지를 개발, 주기적인 코어타임으로 서로의 진행 현황 교류 
+    *  3주차 : UX 와 성능 향상을 위한 리팩토링 , 회고 , 프로젝트 발표 자료 준비 
     
 - **팀 구성 및 역할 분담**:
-    
-    →가장 작은 단위의 컴포넌트부터 기준으로 단위를 키워나가며 각팀원 R&R 분배 
-    
-- **리소스 및 도구 선정**: 필요한 도구와 기술 스택 정하기
-    
-    → *React, styled-component, Vercel* 
-    
-    → Git repo 생성
-    
+- **리소스 및 도구 선정**
 
 **2. 프로젝트 수행**
 
 - **개발**:
     
-    → 공통 *컴포넌트 구현*
     
 - **배포**:
-    
     → Vercel로 배포 상황에서 발생할 수 있는  오류의 주기적인 관찰을 목표로 함
-    
 
 **3. 프로젝트 완료**
 
 - **최종 리뷰 및 피드백**
-    
     → 발표일보다 2일전인 9일을 최종 배포일로 목표하여 예기치 못한 오류에 대비 할수 있게 함.
     
 - **결과 보고서 작성**:
-    
     → *예시: README.md, 프로젝트 요약 보고서*
     
 - **회고**:
-    
     → 마지막 배포 이후 전체 팀원의 회고를 수집하고 취합, 전달하여 각 팀원의 성장을 촉진할 수 있는 방안을 모색했다.
-    
 
 <aside>
 
@@ -225,36 +201,34 @@
 
 # 회고
 ### **🐢 임용균**
-
 > 
 > 
 
 ### **🐿️ 🌰 황혜진**
-
-> 
+> 확실히 강의만 수강 하는 것보다 직접 기획과 프로젝트 전반에 걸친 이해를 필요로 하는 프로젝트 진행이 저의 이해도를 더욱 향상 할 수 있게 해준 것 같아서 강의 뿐만 아니라 개인적인 스프린트 미션 또한 잘 수행 해야겠다는 생각이 들었습니다.
+또한 “프로젝트의 절반이 곧 기획이다.” 라는 생각이 들 만큼 기획의 중요성을 다시 한번 실감하게 되었습니다. 
 > 
 
 ### **🐱 김희진**
-
-> 
+> 초기 라이브러리 세팅과 환경 변수 관리의 중요성을 다시 한번 느꼈습니다. 팀원 간 개발 환경 차이로 인해 package-lock.json 충돌이 지속적으로 발생했고, 이를 맞추는 과정에서 많은 시간이 소요되었습니다. 또한 기획 단계에서 충분한 소통이 이루어지지 않아 프로젝트 후반에 조정이 필요했고, 이 과정에서 효율성이 떨어지는 아쉬움이 있었습니다.
 > 
 
 ### **🐶 이재혁**
-
 > 
 > 
 
 ### **🏍️ 유선향**
 
-> 처음 경험하는 팀프로젝트기에 뿌듯함과 아쉬움이 공존 하는 데요, 프로젝트를 통해 팀원 들과 협력하며 많은 기술을 배우고 경험할 수 있었습니다. 일정 관리와 효율적인 개발을 위해 노력했지만, 일부 예기치 못한 상황에서 어려움을 겪었습니다. 기획 단계에서 미처 의논 하지 못했던 부분이 나중에 문제가 되는 경우도 있었습니다. 향후 프로젝트에서는 더 꼼꼼히 초기 기획과 커뮤니케이션을 개선하려고 합니다.
+> 처음 경험하는 팀프로젝트기에 뿌듯함과 아쉬움이 공존 하는 데요, 프로젝트를 통해 팀원 들과 협력하며 많은 기술을 배우고 경험할 수 있었습니다. 
+일정 관리와 효율적인 개발을 위해 노력했지만, 일부 예기치 못한 상황에서 어려움을 겪었습니다. 
+기획 단계에서 미처 의논 하지 못했던 부분이 나중에 문제가 되는 경우도 있었습니다. 
+향후 프로젝트에서는 더 꼼꼼히 초기 기획과 커뮤니케이션을 개선하려고 합니다.
 >
 </aside>
 
 
 ## 개발 기간 및 작업 관리
 ### 개발 기간
-* 전체 개발 기간
-
-## 📜 라이선스
-이 프로젝트는 MIT 라이선스를 따릅니다. 자세한 내용은 [LICENSE](./LICENSE) 파일을 참고하세요.
-
+* 전체 개발 기간 : 2025년 1월 23일 ~ 2월 11일
+* 1차 배포 : 2025년 1월 27일
+* 최종 배포 : 2025년 2월 9일 
