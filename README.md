@@ -88,7 +88,7 @@
 │		│   ├── Badge/ 
 │		│   ├── CircleImages/ 
 │		│   ├── Emoji/ 
-│		│   ├── ListCard/
+│		│   ├── ListCard/
 │		│   ├── ModalContent/
 │		│   ├── SelectableBox/
 │		│   ├── ShareButton/
@@ -133,10 +133,10 @@
 | 이름 | 역할 | GitHub |
 | --- | --- | --- |
 | **임용균** | button 컴포넌트 / toast 컴포넌트 / list page | https://github.com/ozen0718 |
-| **김희진** | header / layout / badge / postCard 컴포넌트 / landing page /emoji | https://github.com/heewls |
+| **김희진** | header / layout / badge / postCard 컴포넌트 / landing page /emoji/ from page | https://github.com/heewls |
 | **황혜진** | modal 컴포넌트 / to page / 카카오 공유 버튼/ 발표 / theme.color | https://github.com/hhjin1 |
 | **이재혁** | 초기 프로젝트 세팅 / input 컴포넌트 | https://github.com/LEEHAEHYUK |
-| **유선향** | select / post{id} page / 배포 / 발표 준비 / theme.font / 전여상수 / 모달 컨텐츠 | https://github.com/grimza99 |
+| **유선향** | select / post{id} page / 배포 / 발표 준비 / theme.font / 전역상수 / 모달 컨텐츠 | https://github.com/grimza99 |
 
 <aside>
 
@@ -150,7 +150,7 @@
 
 - **목표 설정**
     → 커뮤니티 기능 목적의 웹 애플리케이션 개발
-    → 제시된 피그마와 swagger를 기반으로 필수 구현기능 뿐아니라 사용자의 경험 개선을 목적으로 추가기능 구현까지 목표로 한 
+    → 제시된 피그마와 swagger를 기반으로 필수 구현기능 뿐아니라 사용자의 경험 개선을 목적으로 추가기능 구현까지 목표 
 - **일정 계획**: 프로젝트 마일스톤 설정 및 일정 관리
     
     *  1주차 : 공통 컴포넌트 완료후 1차 배포
@@ -162,32 +162,38 @@
 
 **2. 프로젝트 수행**
 
-- **개발**:
-    
-    
+- **개발**: 기획시 역할 분담에 따라 진행, 주기적인 진행 사항 교류, 코드리뷰, pr approve 설정으로 코드리뷰 참여 유도  
 - **배포**:
     → Vercel로 배포 상황에서 발생할 수 있는  오류의 주기적인 관찰을 목표로 함
 
 **3. 프로젝트 완료**
 
 - **최종 리뷰 및 피드백**
-    → 발표일보다 2일전인 9일을 최종 배포일로 목표하여 예기치 못한 오류에 대비 할수 있게 함.
+    → 발표일보다 2일전인 10일을 최종 배포일로 목표하여 예기치 못한 오류에 대비 할수 있게 함.
     
 - **결과 보고서 작성**:
-    **→README.md, 프로젝트 요약 보고서**
+    **→README.md, 프로젝트 보고서**
     
 - **회고**:
-    → 마지막 배포 이후 전체 팀원의 회고를 수집하고 취합, 전달하여 각 팀원의 성장을 촉진할 수 있는 방안을 모색했습니다.
+    → 마지막 배포 이후 전체 팀원의 회고를 수집하고 취합, 전달하여 각 팀원의 성장을 촉진할 수 있는 방안을 모색
 
 <aside>
 
 # 프로젝트 수행 경과
 
+![유저플로우1](https://github.com/user-attachments/assets/6dca1403-2646-4f59-af06-5292809d52fb)
+![유저플로우2](https://github.com/user-attachments/assets/f11b6c62-a851-43ff-ad26-4dd20cfada44)
+![유저플로우3](https://github.com/user-attachments/assets/3f42dacc-3321-4026-8123-5d6f6cc357c9)
+![유져플로우4](https://github.com/user-attachments/assets/b866a19c-e524-49b8-a469-71f0d9a2f378)
+![유져플로우5](https://github.com/user-attachments/assets/bb64be2c-9514-4344-be9a-33331c647801)
+![유져플로우6](https://github.com/user-attachments/assets/4d753526-9bb4-4181-8588-ad62c841697f)
+
+
 </aside>
 
 ---
 
-시연 사진, 짤 생성 예정 
+
 
 <aside>
 
@@ -218,9 +224,20 @@
 >
 </aside>
 
-
 ## 개발 기간 및 작업 관리
-### 개발 기간
+### 작업 관리
+| 날짜 | 진행 사항  |
+| --- | --- | 
+| 1월 23일 | 초기 기획 및 초기 세팅 |
+| 1월 24일 | 공용컴포넌트 개발 |
+| 1월 27일 | 공용컴포넌트 개발 완료 / 1차 배포 |
+| 2월 3일 | 2차 배포 및 중간 점검 |
+| 2월 7일 | 추가기능, 성능 고도화 , 리팩토링 회의  |
+| 2월 10일| 최종 배포 |
+| 2월 12일 | 제출, 발표 |
+
+### 개발 기간 
 * 전체 개발 기간 : 2025년 1월 23일 ~ 2월 11일
 * 1차 배포 : 2025년 1월 27일
-* 최종 배포 : 2025년 2월 10일 
+* 최종 배포 : 2025년 2월 10일
+* 최종 제출, 발표 : 2025년 2월 12일 
