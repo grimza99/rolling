@@ -187,6 +187,7 @@
 ![유져플로우4](https://github.com/user-attachments/assets/b866a19c-e524-49b8-a469-71f0d9a2f378)
 ![유져플로우5](https://github.com/user-attachments/assets/bb64be2c-9514-4344-be9a-33331c647801)
 ![유져플로우6](https://github.com/user-attachments/assets/4d753526-9bb4-4181-8588-ad62c841697f)
+![유져플로우7](https://github.com/user-attachments/assets/4abae9f8-6a4f-4b3c-b7b5-bf0ef58f96f0)
 
 
 </aside>
